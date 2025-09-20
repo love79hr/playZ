@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+:root{
+
+  /* 폰트 지정 */
+  --main_font: 'Aggravo', sans-serif;
+  --sub_font: "Wanted Sans Variable", "Wanted Sans", sans-serif;
+
+
+  /* 색상 지정 */
+  --main_color: #1a2430;
+  --sub_color: #F5F5F7;
+  --point_color1: #E44848;
+  --point_color2: #7422BF;
+  --point_color3: #7422BF08;
+}

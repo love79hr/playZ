@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+@import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/static/complete/WantedSans.min.css");
+
+
+
+*, *::before, *::after{margin:0; padding:0; box-sizing:border-box;}
+
+/* 여백 초기화 */
+body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li,
+ol, p, select, table, td, textarea, th, ul, figure, figcaption {margin:0; padding:0;}
+
+/* 폰트 초기화 */
+body, button, input, select, table, textarea{
+  font-family: var(--sub_font), "Apple SD Gothic Neo", "Malgun Gothic", "맑은 고딕", helvetica, sans-serif;
+  /* font-weight: lighter; */
+}
+
+/* a링크 초기화 */
+a, a:hover, a:focus{color: inherit; text-decoration: none; cursor: pointer;}
+
+/* 폰트 스타일 초기화 */
+em, address{font-style: normal;}
+strong{font-weight: normal;}
+
+/* 블릿기호 초기화 */
+dl, ul, li, ol, menu{list-style: none;}
+
+/* 타이틀 태그 초기화 */
+h1, h2, h3, h4, h5, h6{font-size:16px; color: var(--sub_color); font-weight: normal;}
+
+/* 테두리 초기화 */
+img, fieldset{border:0 none;}
+
+/* 버튼 초기화 */
+button{border:0 none; background-color: transparent; cursor: pointer;}
+
+/* 이미지, 비디오 초기화 */
+img, video{vertical-align: top; width: 100%; display: block;}
+
+
+/* clearfix */
+.clearfix::before, .clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+*::selection{
+  background-color: var(--point_color1);
+  color: var(--sub_color);
+}
+
+
+/* 공유아이콘 초기화 */
+.share_btn i,
+.share_btn .fa,
+.share_btn .fas,
+.share_btn .far,
+.share_btn .fab {
+  display: none !important;
+}
+
+
+/* 공통 지정구역 */
+body,html{
+  margin: 0 auto;
+  background-color: var(--main_color);
+  color: var(--sub_color);
+  overflow-x: hidden;
+}
+
+.container{
+  width: 1460px;
+  height: inherit;
+  margin: 0 auto;
+  padding: 0 1%;
+  /* background-color: rgba(255, 90, 90, 0.1); */
+}
+
+
+.h1{
+  font-size: clamp(26px, 5vw, 80px);
+  font-family: var(--main_font);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+} 
+
+
+
+/* 컨테이너 미디어 지정구역 */
+@media (max-width: 1460px) {
+  .container{
+    width: 100%;
+    padding: 0 2%;
+  }
+}

@@ -1,0 +1,77 @@
+#footer{
+  width: 100%;
+  /* height: 450px; */
+}
+.footer{
+  width: 100%;
+  height: 100%;
+}
+
+.f_top{
+  width: 100%;
+  height: clamp(250px, 25vw, 400px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 4% 0; */
+}
+
+.f_logo{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding-top: 2%; */
+  margin-bottom: 2%;
+}
+.f_logo a{}
+.f_logo a img{
+  width: clamp(180px, 25vw, 300px);
+}
+
+.f_copy{
+  width: 100%;
+}
+.f_copy ul{
+  width: 100%;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.f_copy ul li{
+  font-size: clamp(14px, 2vw, 24px);
+  margin-bottom: 1%;
+}
+.f_copy ul li.link{
+  color: var(--point_color1);
+}
+
+/* 웹페이지 맨 하단 카피라이트 */
+.f_bottom{
+  width: 100%;
+  height: clamp(30px, 5vw, 50px);
+  background-color: var(--point_color2);
+}
+.f_bottom p{
+  width: 100%;
+  height: 100%;
+  font-size: clamp(10px, 1.5vw, 16px);
+  font-family: var(--sub_font);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .f_logo{
+    margin-bottom: 8%;
+  }
+  .f_copy ul li{
+    margin-bottom: 2%;
+  }
+  .f_bottom p{
+    justify-content: center;
+  }
+}
