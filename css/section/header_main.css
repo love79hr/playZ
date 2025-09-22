@@ -276,7 +276,7 @@
 
   /* 배너 동영상 사이즈 */
   .banner{
-    height: 600px;
+    height: 580px;
   }
 }
 @media (max-width: 320px){
