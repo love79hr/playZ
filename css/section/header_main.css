@@ -219,13 +219,13 @@
 
   /* 배너 동영상 사이즈 */
   .banner{
-    height: 80vh;
+    height: 900px;
   }
 }
 @media (max-width: 960px){
   /* 배너 동영상 사이즈 */
   .banner{
-    height: 70vh;
+    height: 800px;
   }
 }
 @media (max-width: 768px){
@@ -276,7 +276,7 @@
 
   /* 배너 동영상 사이즈 */
   .banner{
-    height: 50vh;
+    height: 600px;
   }
 }
 @media (max-width: 320px){
@@ -314,6 +314,6 @@
 
   /* 배너 동영상 사이즈 */
   .banner{
-    height: 40vh;
+    height: 400px;
   }
 }

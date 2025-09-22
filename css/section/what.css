@@ -102,7 +102,7 @@
 
 @media (max-width: 1080px){
   #what{
-    height: 80vh;
+    height: 870px;
   }
   .what{
     margin-top: 20%;
@@ -122,7 +122,7 @@
 
 @media (max-width: 768px){
   #what{
-    height: 70vh;
+    height: 760px;
   }
   .cont_box{
     width: 46%;
@@ -149,7 +149,7 @@
 }
 @media (max-width: 480px){
   #what{
-    height: 80vh;
+    height: 870px;
   }
   .what{
     margin-top: 30%;
@@ -168,7 +168,10 @@
 }
 @media (max-width: 320px){
   #what{
-    height: 70vh;
+    height: 700px;
+  }
+  .what{
+    margin-top: 40%;
   }
   .what_cont{
     margin-top: 15%;
