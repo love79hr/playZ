@@ -52,7 +52,24 @@
 .f_bottom{
   width: 100%;
   height: clamp(30px, 5vw, 50px);
+  background-color: var(--main_color);
+  position: relative;
+  overflow: hidden;
+}
+
+.f_bottom::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
   background-color: var(--point_color2);
+  transition: width 0.8s ease-in-out;
+}
+
+.f_bottom.animate::before{
+  width: 100%;
 }
 .f_bottom p{
   width: 100%;
@@ -62,6 +79,8 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 @media (max-width: 480px) {

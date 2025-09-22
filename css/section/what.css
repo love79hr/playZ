@@ -1,11 +1,16 @@
 #what{
   width: 100%;
   height: 100vh;
-  /* background-color: rgba(255,255,255,0.05); */
+  background-image: url("https://github.com/love79hr/playZ/blob/main/images/what_bg.png?raw=true");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 10;
 }
 .what{
-  width: 100%;  
-  padding-top: 7%;
+  width: 100%; 
+  margin-top: 25%;
 }
 
 .what_cont{
@@ -13,13 +18,29 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 3%;
+  margin-top: 5%;
 }
 
 .cont_box{
   width: 38%;
   position: relative;
   z-index: 1;
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+  overflow: hidden;
+}
+
+.what_left{
+  transform: translateX(-100px);
+}
+
+.what_right{
+  transform: translateX(100px);
+}
+
+.cont_box.animate{
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .what_left{}
@@ -27,7 +48,7 @@
 
 .img_box{
   width: 100%;
-  height: inherit;
+  height: 100%;
 }
 .img_box a{
   display: block;
@@ -44,7 +65,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(26, 36, 48, 0.7);
+  background-color: rgba(5, 2, 19, 0.7);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,20 +84,98 @@
 }
 .txt_box a.button{
   display: block;
-  background-color: var(--point_color1);
-  font-size: clamp(16px, 2.5vw, 25px);
+  width: 125px;
+  /* padding: 20px; */
+  line-height: 50px;
+  background-image: linear-gradient(to right, #E63C3C 0%, #AC3584 50%, #7422BF 50%, #AC3584 50%, #E63C3C 100%);
+  background-size: 200px auto;
+  font-size: clamp(16px, 2.5vw, 20px);
   text-align: center;
-  padding: 1.5% 7%;
   border-radius: 15px;
-  box-shadow: 3px 3px 0px rgba(26, 36, 48, 0.5);
+  box-shadow: 3px 3px 3px rgba(5, 2, 19, 0.5);
   margin-top: 3%;
+  transition: all 0.3s;
+}
+.txt_box a.button:hover{
+  background-position: right center;
 }
 
 @media (max-width: 1080px){
+  #what{
+    height: 80vh;
+  }
   .what{
-    padding-top: 20%;
+    margin-top: 20%;
   }
   .what_cont{
     margin-top: 10%;
   }
+  .cont_box{
+    width: 43%;
+  }
 }
+@media (max-width: 960px){
+  .what_cont{
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 768px){
+  #what{
+    height: 70vh;
+  }
+  .cont_box{
+    width: 46%;
+  }
+  .txt_box a.button{
+    width: 100px;
+    line-height: 45px;
+    margin-top: 5%;
+  }
+}
+@media (max-width: 600px){
+  #what{
+    height: 100vh;
+  }
+  .what_cont{
+    flex-direction: column;
+  }
+  .cont_box{
+    width: 60%;
+  }
+  .what_left{
+    margin-bottom: 5%;
+  }
+}
+@media (max-width: 480px){
+  #what{
+    height: 80vh;
+  }
+  .what{
+    margin-top: 30%;
+  }
+  .cont_box{
+    width: 310px;
+    height: 310px;
+  }
+  .txt_box a.button{
+    width: 80px;
+    line-height: 35px;
+  }
+  .txt_box h2{
+    font-size: 28px;
+  }
+}
+@media (max-width: 320px){
+  #what{
+    height: 70vh;
+  }
+  .what_cont{
+    margin-top: 15%;
+  }
+  .cont_box{
+    width: 260px;
+    height: 260px;
+  }
+}
+

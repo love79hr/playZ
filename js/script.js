@@ -8,6 +8,102 @@ navBar.addEventListener('click', () => {
   navBar.classList.toggle('active');
 });
 
+// 스크롤 애니메이션
+const whatSection = document.querySelector('#what');
+const whatBoxes = document.querySelectorAll('.cont_box');
+const onlySection = document.querySelector('#only');
+const onlyCont = document.querySelector('.only_cont');
+const aboutSection = document.querySelector('#about');
+const aboutText = document.querySelector('.about_cont p');
+const aboutButton = document.querySelector('.about_cont a.about_button');
+const footerBottom = document.querySelector('.f_bottom');
+
+function checkScroll() {
+  const scrollTop = window.pageYOffset;
+  const windowHeight = window.innerHeight;
+  
+  // what 섹션 애니메이션
+  const whatSectionTop = whatSection.offsetTop;
+  const whatSectionHeight = whatSection.offsetHeight;
+  
+  if (scrollTop + windowHeight > whatSectionTop + whatSectionHeight * 0.5) {
+    whatBoxes.forEach((box, index) => {
+      setTimeout(() => {
+        box.classList.add('animate');
+      }, index); 
+    });
+  } else {
+    whatBoxes.forEach((box) => {
+      box.classList.remove('animate');
+    });
+  }
+  
+  // only 섹션 애니메이션
+  const onlySectionTop = onlySection.offsetTop;
+  const onlySectionHeight = onlySection.offsetHeight;
+  
+  if (scrollTop + windowHeight > onlySectionTop + onlySectionHeight * 0.3) {
+    onlyCont.classList.add('animate');
+  } else {
+    onlyCont.classList.remove('animate');
+  }
+  
+  // about 섹션 애니메이션
+  const aboutSectionTop = aboutSection.offsetTop;
+  const aboutSectionHeight = aboutSection.offsetHeight;
+  
+  if (scrollTop + windowHeight > aboutSectionTop + aboutSectionHeight * 0.4) {
+    // 텍스트 먼저 애니메이션
+    aboutText.classList.add('animate');
+    
+    // 0.3초 후 버튼 애니메이션
+    setTimeout(() => {
+      aboutButton.classList.add('animate');
+    });
+  } else {
+    aboutText.classList.remove('animate');
+    aboutButton.classList.remove('animate');
+  }
+  
+  // footer 배경 채우기 애니메이션
+  const footerTop = footerBottom.offsetTop;
+  const footerHeight = footerBottom.offsetHeight;
+  
+  if (scrollTop + windowHeight > footerTop + footerHeight * 0.5) {
+    footerBottom.classList.add('animate');
+  } else {
+    footerBottom.classList.remove('animate');
+  }
+}
+
+// 스크롤 방향 감지
+let lastScrollTop = 0;
+let isScrollingDown = true;
+
+function handleScrollDirection() {
+  const currentScrollTop = window.pageYOffset;
+  
+  if (currentScrollTop > lastScrollTop) {
+    // 아래로 스크롤
+    isScrollingDown = true;
+  } else {
+    // 위로 스크롤
+    isScrollingDown = false;
+  }
+  
+  lastScrollTop = currentScrollTop;
+  checkScroll();
+}
+
+// 스크롤 이벤트 리스너를 방향 감지 함수로 변경
+window.removeEventListener('scroll', checkScroll);
+window.addEventListener('scroll', handleScrollDirection);
+
+// 페이지 로드 시에도 체크
+window.addEventListener('load', checkScroll);
+
+
+
 // 크리에이터 데이터
 const creatorData = {
   bdns: {
@@ -257,4 +353,5 @@ document.addEventListener('keydown', (e) => {
     closePopup();
   }
 });
+
 

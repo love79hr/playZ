@@ -1,10 +1,13 @@
 #about{
   width: 100%;
   height: 100vh;
-  /* background-color: rgba(255,255,255,0.05); */
+  background-image: url("https://github.com/love79hr/playZ/blob/main/images/about_bg.png?raw=true");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .about{
-  padding-top: 15%;
+  margin-top: 15%;
 }
 
 .about_cont{
@@ -20,24 +23,95 @@
 .about_cont p{
   font-size: clamp(20px, 5vw, 35px);
   line-height: 1.5;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.8s ease-in-out;
+  word-break: keep-all;
+}
+br.m_block{
+  display: none;
+}
+
+.about_cont p.animate{
+  opacity: 1;
+  transform: scale(1);
 }
 .about_cont a.about_button{
   margin-top: 3%;
   display: block;
-  padding: 1% 3%;
+  width: 125px;
+  line-height: 50px;
   border-radius: 15px;
   box-shadow: 3px 3px 3px rgba(0,0,0, 0.3);
-  background-color: var(--point_color1);
+  background-image: linear-gradient(to right, #E63C3C 0%, #AC3584 50%, #7422BF 50%, #AC3584 50%, #E63C3C 100%);
+  background-size: 200px auto;
   color: var(--sub_color);
-  font-size: clamp(16px, 2.5vw, 25px);
+  font-size: clamp(16px, 2.5vw, 20px);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out, background-position 0.3s ease;
+}
+
+.about_cont a.about_button.animate{
+  opacity: 1;
+  transform: scale(1);
+}
+.about_cont a.about_button:hover{
+  background-position: right center;
 }
 
 
 @media (max-width: 1080px){
+  #about{
+    height: 80vh;
+  }
   .about{
-    padding-top: 30%;
+    margin-top: 20%;
   }
   .about_cont{
+    margin-top: 10%;
+  }
+}
+
+@media (max-width: 768px){
+  #about{
+    height: 70vh;
+  }
+  .about_cont{    
+  padding: 0 5%;
+  }
+  .about_cont p{
+    font-size: clamp(20px, 5vw, 30px);
+  }
+  br.m_block{
+    display: block;
+  }
+  .about_cont a.about_button{
+    margin-top: 5%;
+    width: 100px;
+    line-height: 45px;
+  }
+}
+@media (max-width: 768px){
+  #about{
+    height: 60vh;
+  }
+}
+@media (max-width: 480px){
+  #about{
+    height: 50vh;
+  }
+  .about{
+    margin-top: 30%;
+  }
+  .about_cont a.about_button{
+    margin-top: 10%;
+    font-size: 20px;
+  }
+}
+@media (max-width: 320px){
+  .about_cont{
     margin-top: 15%;
+    padding: 0 3%;
   }
 }
