@@ -280,12 +280,14 @@
     transform: translateY(-8px);
   }
   .nav_bar.active .bar-2{
-    transform: rotate(-35deg);
+    transform: rotate(-37deg);
   }
   .nav_bar.active .bar-3{
     transform: translateY(8px);
   }
-
+  .nav_menu ul{
+    top: 48%;
+  }
   .nav_menu ul li{
     padding-bottom: 10%;
   }
@@ -332,7 +334,7 @@
     transform: translateY(-6px);
   }
   .nav_bar.active .bar-2{
-    transform: rotate(-36deg);
+    transform: rotate(-38deg);
   }
   .nav_bar.active .bar-3{
     transform: translateY(6px);
