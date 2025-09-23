@@ -230,16 +230,28 @@
 }
 @media (max-width: 768px){
   .nav_menu ul{
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
   }
   .nav_menu ul li{
     padding-bottom: 4%;
   }
+
+  .banner{
+    padding-top: 10%;
+  }
 }
 @media (max-width: 600px){
+  .nav_menu ul li{
+    padding-bottom: 5%;
+  }
+  .nav_menu ul li a{  
+    font-size: 35px;
+  }
+
   /* 배너 동영상 사이즈 */
   .banner{
-    height: 60vh;
+    height: 650px;
+    padding-top: 15%;
   }
 }
 @media (max-width: 480px){
@@ -274,9 +286,23 @@
     transform: translateY(8px);
   }
 
+  .nav_menu ul li{
+    padding-bottom: 10%;
+  }
+  .nav_menu ul li a{  
+    font-size: 28px;
+  }
+
   /* 배너 동영상 사이즈 */
   .banner{
-    height: 580px;
+    padding-top: 20%;
+    height: 650px;
+  }
+}
+@media (max-width: 400px){
+  .banner{
+    padding-top: 25%;
+    height: 500px;
   }
 }
 @media (max-width: 320px){
@@ -314,6 +340,6 @@
 
   /* 배너 동영상 사이즈 */
   .banner{
-    height: 380px;
+    height: 450px;
   }
 }
