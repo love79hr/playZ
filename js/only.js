@@ -12,14 +12,14 @@ navBar.addEventListener('click', () => {
 window.addEventListener('scroll', checkScroll);
 const footerBottom = document.querySelector('.f_bottom');
 
-function checkScroll(){
+function checkScroll() {
   const scrollTop = window.pageYOffset;
   const windowHeight = window.innerHeight;
 
   // footer 배경 채우기 애니메이션
   const footerTop = footerBottom.offsetTop;
   const footerHeight = footerBottom.offsetHeight;
-  
+
   if (scrollTop + windowHeight > footerTop + footerHeight * 0.5) {
     footerBottom.classList.add('animate');
   } else {
@@ -27,91 +27,99 @@ function checkScroll(){
   }
 }
 
-// 주제별 카테고리 필터하기 (반응형 gutter 적용)
-window.addEventListener("load", () => {
-  let grid;
-  
-  // 화면 크기에 따른 gutter 값 설정
+// 주제별 카테고리 필터하기 (istope 플러그인)
+document.addEventListener('DOMContentLoaded', function() {
+  // 화면 크기별 gutter 값 설정
   function getGutterValue() {
     const width = window.innerWidth;
-    
-    if (width <= 320) return 10;      // 매우 작은 화면
-    if (width <= 480) return 20;      // 매우 작은 화면
-    if (width <= 768) return 24;     // 모바일
-    if (width <= 1024) return 28;    // 태블릿
-    if (width <= 1440) return 36;    // 작은 데스크톱
-    return 38;                       // 큰 데스크톱
-  }
-  
-  // isotope 초기화
-  function initIsotope() {
-    const gutterValue = getGutterValue();
-    const width = window.innerWidth;
-    
-    grid = new Isotope("ul.creator_list", {
-      itemSelector: 'li',
-      layoutMode: 'masonry',
-      percentPosition: true,
-      masonry: {
-        columnWidth: 'li',
-        gutter: gutterValue,
-        horizontalOrder: true,
-        fitWidth: true
-      }
-    });
+    if (width <= 320) return 10;
+    if (width <= 480) return 20;
+    if (width <= 600) return 15;
+    if (width <= 768) return 20;
+    if (width <= 960) return 20;
+    if (width <= 1420) return 26;
+    if (width <= 1460) return 27;
+    return 28; // 1460px 이상
   }
 
-  // CSS 필터링 함수 (600px 이하용)
-  function filterItems(filter) {
-    const items = document.querySelectorAll('ul.creator_list li');
+  // 화면 크기별 li width 동적 계산
+  function getLiWidth() {
+    const width = window.innerWidth;
+    const containerWidth = document.querySelector('.creator_list').offsetWidth;
     
-    items.forEach(item => {
-      if (filter === '*' || filter === '') {
-        item.style.display = 'block';
-      } else {
-        if (item.classList.contains(filter.replace('.', ''))) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      }
-    });
+    // if (width <= 1460) {
+    //   // 2열
+    //   const gutter = getGutterValue();
+    //   return (containerWidth - (1 * gutter)) / 2;
+    // } else if (width <= 768) {
+    //   // 3열
+    //   const gutter = getGutterValue();
+    //   return (containerWidth - (2 * gutter)) / 3;
+    // } else if (width <= 1460) {
+    //   // 4열
+    //   const gutter = 27; // 고정 gutter 값
+    //   return (containerWidth - (3 * gutter)) / 4;
+    // }
+    // return null; // 기본 CSS width 사용
   }
-  
-  // 초기화
-  initIsotope();
-  
-  // 리사이즈 이벤트 (디바운싱 적용)
-  let resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(() => {
-      grid.masonry({
-        gutter: getGutterValue(),
-        fitWidth: true
+
+  // li 요소들의 width 설정
+  function updateLiWidth() {
+    const liWidth = getLiWidth();
+    if (liWidth) {
+      document.querySelectorAll('.creator_list li').forEach(li => {
+        li.style.width = liWidth + 'px';
       });
-      grid.layout();
-    }, 250); // 250ms 후에 실행
+    } else {
+      // 기본 CSS width로 복원
+      document.querySelectorAll('.creator_list li').forEach(li => {
+        li.style.width = '';
+      });
+    }
+  }
+
+  // Isotope 초기화
+  const grid = document.querySelector('.creator_list');
+  const iso = new Isotope(grid, {
+    itemSelector: 'li',
+    layoutMode: 'fitRows',
+    percentPosition: true,
+    fitRows: {
+      gutter: getGutterValue()
+    }
   });
 
-  // 필터 기능
-  const btns = document.querySelectorAll(".title_list >li");
+  // 초기 width 설정
+  updateLiWidth();
 
-  for(let el of btns){
-    el.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      const sort = e.currentTarget.querySelector("a").getAttribute("href");
-
-      // isotope 필터링 사용
-      grid.arrange({
-        filter: sort
-      });
-
-      for(let el of btns){
-        el.classList.remove("on");
+  // 화면 크기 변경 시 gutter 값과 width 업데이트
+  window.addEventListener('resize', function() {
+    updateLiWidth();
+    iso.arrange({
+      fitRows: {
+        gutter: getGutterValue()
       }
-      e.currentTarget.classList.add("on");
-    })
-  }
-})
+    });
+  });
+
+  // 필터 버튼 클릭 이벤트
+  const filterButtons = document.querySelectorAll('.title_list li a');
+  
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // 활성 클래스 변경
+      document.querySelectorAll('.title_list li').forEach(li => {
+        li.classList.remove('on');
+      });
+      this.parentElement.classList.add('on');
+      
+      // 필터 값 가져오기
+      const filterValue = this.getAttribute('href');
+      
+      // Isotope 필터 적용
+      iso.arrange({ filter: filterValue });
+    });
+  });
+});

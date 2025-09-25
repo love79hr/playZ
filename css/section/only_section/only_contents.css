@@ -37,18 +37,19 @@ ul.title_list li.on a{
 .concept_creator{
   width: 100%;
   height: auto;
+  /* background-color: blue; */
 }
 ul.creator_list{
   width: 100%;
   height: auto;
   /* background-color: aquamarine; */
-
 }
 ul.creator_list li{
-  width: 23%;
-  padding-bottom: 5%;
+  width: 23.5%;
+  height: clamp(200px, 25vw, 380px);
+  margin-bottom: 5%;
+  float: left;
 }
-
 ul.creator_list li a{
   display: block;
   border: 2px solid var(--main_color);
@@ -64,15 +65,39 @@ ul.creator_list li span{
   color: var(--main_color);
 }
 
-@media (max-width: 1080px){}
-@media (max-width: 960px){
+
+@media (max-width: 1368px){
   ul.creator_list li{
-    width: 21%;
+    width: 250px;
+    height: 350px;
+    margin-bottom: 0;
   }
 }
-@media (max-width: 768px){  
+@media (max-width: 1080px){
+  ul.creator_list li{
+    width: 200px;
+    height: 280px;
+  }
+}
+@media (max-width: 960px){
+  ul.creator_list li{
+    width: 185px;
+    height: 260px;
+  }
+  ul.creator_list li span{
+    padding-top: 5%;
+  }
+}
+@media (max-width: 768px){
+  ul.creator_list li{
+    width: 165px;
+    height: 230px;
+  }
   ul.creator_list li a{
     border: 1px solid var(--main_color);
+  }
+  ul.creator_list li span{
+    font-size: 18px;
   }
 }
 @media (max-width: 600px){
@@ -86,26 +111,41 @@ ul.creator_list li span{
     text-align: center;
   }
   ul.creator_list{
-   margin: 0 auto;
-   max-width: 90%;
-  }
-  ul.creator_list li{
-    width: 30%;
-  }
-}
-@media (max-width: 480px){
-  ul.creator_list{
+    max-width: 525px;
     margin: 0 auto;
   }
-  ul.creator_list li{   
-    width: 45%;
+  ul.creator_list li{
+    width: 165px;
+    height: 230px;
+  }
+}
+@media (max-width: 561px){  
+  ul.creator_list{
+    max-width: 435px;
+    margin: 0 auto;
+  }
+  ul.creator_list li{
+    width: 135px;
+    height: 200px;
+  }
+}
+@media (max-width: 480px){  
+  ul.creator_list{
+    max-width: 290px;
+    margin: 0 auto;
+  }
+  ul.creator_list li{
+    width: 135px;
+    height: 180px;
   }
 }
 @media (max-width: 320px){
   ul.creator_list{
+    max-width: 260px;
     margin: 0 auto;
   }
-  ul.creator_list li{   
-    width: 45%;
+  ul.creator_list li{
+    width: 125px;
+    height: 170px;
   }
 }
