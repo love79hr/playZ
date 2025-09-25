@@ -5,9 +5,25 @@
 @import url(./setting/vars.css);
 @import url(./setting/reset.css);
 
-/* section */
+/* section_main*/
 @import url(./section/header_main.css);
 @import url(./section/what.css);
 @import url(./section/only.css);
 @import url(./section/about.css);
-@import url(./section/footer.css);
+@import url(./section/footer_main.css);
+
+/* section_what */
+@import url(./section/what_section/header_what.css);
+@import url(./section/what_section/footer_what.css);
+
+
+/* section_only */
+@import url(./section/only_section/header_only.css);
+@import url(./section/only_section/footer_only.css);
+@import url(./section/only_section/only_title.css);
+@import url(./section/only_section/only_contents.css);
+
+
+/* section_about */
+@import url(./section/about_section/header_about.css);
+@import url(./section/about_section/footer_about.css);

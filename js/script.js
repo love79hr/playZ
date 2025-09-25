@@ -111,7 +111,7 @@ const creatorData = {
     handle: "@bdns",
     stats: "구독자 215만명 • 동영상 1.6천개",
     logo: "https://github.com/love79hr/playZ/blob/main/images/bdns.png?raw=true",
-    youtube: "weg7EdkPTk8",
+    youtube: "qMYHsOI8oPQ",
     instagram: "https://www.instagram.com/bdnspresents/",
     youtubeChannel: "https://www.youtube.com/@bdns",
     description: [
