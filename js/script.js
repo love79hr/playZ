@@ -125,14 +125,14 @@ const creatorData = {
     handle: "@주둥이방송",
     stats: "구독자 142만명 • 동영상 2.4천개",
     logo: "https://github.com/love79hr/playZ/blob/main/images/judung.png?raw=true",
-    youtube: "iC6OzB-vrcc",
+    youtube: "8EaKxdHvGO4",
     instagram: "instagram.com/joodoong_e",
     youtubeChannel: "https://www.youtube.com/@주둥이방송",
     description: [
-      "잼민이 챌린지와 밤샘 토크의 롤큐 마스터!",
-      "트위치 스트리머 출신의 솔직 먹방·게임 방송",
-      "꾸미지 않은 매력으로 20대 팬덤을 사로잡는 에너지 폭발.",
-      "주둥이방송의 리얼 라이프!"
+      "거침없는 입담으로 밤샘 토크의 마스터",
+      "치지직 스트리머의 솔직 먹방·고민타파 방송",
+      "꾸미지 않은 매력으로 MZ를 사로잡은 에너지 폭발!",
+      "주둥이방송의 리얼 라이프"
     ]
   },
   jindol: {
@@ -140,14 +140,14 @@ const creatorData = {
     handle: "@jindol",
     stats: "구독자 54.5만명 • 동영상 1천개",
     logo: "https://github.com/love79hr/playZ/blob/main/images/jindol.png?raw=true",
-    youtube: "BV7jJ4Kq_X4",
+    youtube: "04lh8mdHnfk",
     instagram: "https://www.instagram.com/doldistudio/",
     youtubeChannel: "https://www.youtube.com/@jindol",
     description: [
-      "웹툰 작가의 밤샘 창작과 부부 티키타카!",
-      "네이버 '시월드 판타지' 글작가 진돌의 색약 이야기와 '더 글로리' 후기",
-      "아내 히디와 함께하는 오타쿠 버라이어티.",
-      "진돌의 창작 일상으로 초대!"
+      "前 웹툰 작가의 밤샘 티키타카",
+      "색약 웹툰 글작가 진돌과 가끔 출연하는",
+      "아내 히ㅣㅣ디와 함께하는 오타쿠 일상기",
+      "진돌의 창작 스트리밍으로 초대합니다"
     ]
   },
   diva: {
@@ -159,10 +159,10 @@ const creatorData = {
     instagram: "https://www.instagram.com/deeva_jessica/",
     youtubeChannel: "https://www.youtube.com/@divajessica",
     description: [
-      "미스터리와 사건의 세계로 이끄는 1세대 스토리텔러!",
-      "미국 생활 경험을 바탕으로 토요미스테리와 금요사건파일",
-      "영어 교육과 지식 콘텐츠로 다양한 팬층을 사로잡아요.",
-      "디바제시카의 미스터리 여정에 빠져보세요!"
+      "미스터리 사건의 세계로 이끄는 1세대 스토리텔러",
+      "미국 생활 경험을 바탕으로 영어 교육과 지식 콘텐츠로 시작하여",
+      "토요미스테리와 금요사건파일로 많은 사랑을 받는",
+      "디바제시카의 미스터리 여정에 빠져보세요"
     ]
   },
   summer: {
@@ -174,10 +174,10 @@ const creatorData = {
     instagram: "https://www.instagram.com/summerinbk/",
     youtubeChannel: "https://www.youtube.com/@summerinNY",
     description: [
-      "뉴욕 일상과 무서운 이야기의 스릴 넘치는 블렌드!",
+      "뉴욕 일상과 무서운 이야기의 스릴 넘치는 블렌드",
       "미국 사건 사고와 매주 금요일 라이브로 풀어내는 스토리텔링",
-      "과거 파워 블로거 '솜블리'의 메이크업 매력까지.",
-      "썸머썸머와 뉴욕 라이프를 느껴보세요!"
+      "한국과 미국을 넘나드는 일상 브이로그까지 준비된",
+      "썸머썸머의 뉴욕 라이프를 느껴보세요"
     ]
   },
   foodie: {
@@ -185,14 +185,13 @@ const creatorData = {
     handle: "@_foodie_jen",
     stats: "구독자 57.5만명 • 동영상 144개",
     logo: "https://github.com/love79hr/playZ/blob/main/images/foodie.png?raw=true",
-    youtube: "EuK4Tv5l9-k",
+    youtube: "doW7WWhLhNk",
     instagram: "https://www.instagram.com/_foodie_jen/",
     youtubeChannel: "https://www.youtube.com/@_foodie_jen",
     description: [
-      "미국 새댁의 쉬운 주방 이야기, 집밥의 매력!",
-      "미국사는 직장인 새댁의 우당탕탕 주방이야기👩🏻‍🍳",
-      "#초간단요리 만 조아혀요 #그냥 대충혀… #공구 안합니다❌",
-      "먹방과 실생활 요리로 공감 유발 푸디젠의 맛있는 일상으로 초대!"
+      "미국사는 직장인 새댁의 우당탕탕 주방이야기",
+      "그냥 대충....열심히는 모르겠고 맛만 있으면 된거 아닌가요?",
+      "먹방과 실생활 요리로 공감 유발하는 푸디젠의 요리 일상"
     ]
   },
   pannie: {
@@ -204,10 +203,11 @@ const creatorData = {
     instagram: "https://www.instagram.com/panibottle_official/",
     youtubeChannel: "https://www.youtube.com/@PaniBottle",
     description: [
-      "세계 폐허 탐방의 대륙 횡단 마스터",
+      "세계 폐허 탐방과 대륙 횡단의 마스터",
       "인도에서 시작된 434일 유라시아 대륙 여행",
-      "지도 속 그곳, 사진 속 풍경, 그리고 사람들의 이야기까지.",
-      "빠니보틀과 떠나는 여행에서 모든 순간이 특별해집니다."
+      "지도 속 그곳, 세상의 끝, 만나는 사람들과의 이야기",
+      "어떠한 사람들과, 어떤 추억일지는 모르지만",
+      "빠니보틀과 떠나는 여행은 모든 순간이 특별하다"
     ]
   },
   captin: {
@@ -215,14 +215,14 @@ const creatorData = {
     handle: "@captainbrother",
     stats: "구독자 67.7만명 • 동영상 526개",
     logo: "https://github.com/love79hr/playZ/blob/main/images/captin.png?raw=true",
-    youtube: "iCKc6Kg_6f8",
+    youtube: "NhTOGu5Zfig",
     instagram: "https://www.instagram.com/sinomoon/",
     youtubeChannel: "https://www.youtube.com/@captainbrother",
     description: [
-      "사람이 좋아서 떠나는 진짜 여행!",
-      "전직 공군 대위의 15년 중국 라이프를 바탕으로,",
-      "현지인 스토리로 풀어내는 깊이 있는 문화 탐험.",
-      "당신의 여행을 바꿔줄 영감의 시작!"
+      "사람이 좋아서 떠나는 여행 캡틴 따거입니다",
+      "전직 공군 대위이지만 15년 중국 라이프를 바탕으로",
+      "정말 현지인같은 스토리로 함께하는 문화탐험",
+      "당신의 여행을 간접체험 해드립니다"
     ]
   },
   wonji: {
@@ -230,13 +230,14 @@ const creatorData = {
     handle: "@im1G",
     stats: "구독자 102만명 • 동영상 351개",
     logo: "https://github.com/love79hr/playZ/blob/main/images/wonji.png?raw=true",
-    youtube: "xi25ChS5YbI",
+    youtube: "pCjqw9vZCDk",
     instagram: "https://www.instagram.com/im1g/",
     youtubeChannel: "https://www.youtube.com/@im1G",
     description: [
-      "한 곳에 머물며 살아가듯, 진짜 여행의 맛!",
+      "한 곳에 머물며 살아가듯, 여행을 일상과 같이 즐긴다",
       "우간다 자취부터 소소한 현지 탐방까지,",
-      "일상과 여행의 경계를 허무는 원지의 하루로 떠나보세요!"
+      "일상과 여행의 경계를 완전히 허물어 버린 원지의 하루와 함께",
+      "여행같은 일상을 일상같은 여행을 즐깁시다"
     ]
   },
   recording: {
@@ -244,14 +245,14 @@ const creatorData = {
     handle: "@tikitakabooboo",
     stats: "구독자 132만명 • 동영상 92개",
     logo: "https://github.com/love79hr/playZ/blob/main/images/recording.png?raw=true",
-    youtube: "2FhZBNfo_gE",
+    youtube: "pNHMmUbqlMc",
     instagram: "https://www.instagram.com/tikitakabooboo/",
     youtubeChannel: "https://www.youtube.com/@tikitakabooboo",
     description: [
-      "우리 집은 언제나 녹음 중🔴 노래와 개그의 티키타카!",
-      "8년차 부부의 일상 대화를 애니메이션으로 재현한 '결혼 장려 영상'",
-      "귀여운 캐릭터가 전하는 웃음과 공감 폭발",
-      "부부의 리얼 라이프를 느껴보세요!"
+      "우리 집은 언제나 녹음 중🔴",
+      "8년차 부부가 함께하는 노래와 개그의 티키타카",
+      "일상 대화를 귀여운 캐릭터 애니메이션으로 재현해낸",
+      "찐부부의 리얼 라이프를 느껴보세요"
     ]
   },
   hamzzi: {
@@ -263,9 +264,10 @@ const creatorData = {
     instagram: "https://www.instagram.com/anx_hamzzikim/",
     youtubeChannel: "https://www.youtube.com/@정서불안김햄찌",
     description: [
-      "정서불안 햄스터의 도파민 터지는 일상!",
-      "AI로 탄생한 햄스터 '김햄찌'가 그려내는 직장 생활의 웃픈 에피소드",
-      "직장인의 힐링 공감 폭발 애니메이션으로 스트레스 날려버리세요."
+      "정서불안 직장인 햄스터의 도파민 터지는 일상",
+      "AI로 탄생한 햄스터 '김햄찌'가 그려내는",
+      "직장 생활의 웃픈 에피소드",
+      "직장인의 힐링 공감 스트레스가 공존하는 애니메이션"
     ]
   },
   review: {
@@ -277,10 +279,10 @@ const creatorData = {
     instagram: "https://www.instagram.com/reviewyanolza/",
     youtubeChannel: "https://www.youtube.com/@리뷰야놀자",
     description: [
-      "여러 제품들을 여러분에게 재밌고 솔직하게 리뷰합니다!",
-      "카카오프렌즈부터 실생활 아이템까지,",
-      "알뜰 소비 팁과 유쾌한 후기로 쇼핑의 재미를 더하세요.",
-      "리뷰야 놀자의 솔직 리뷰의 세계로 초대!"
+      "여러 제품들을 여러분에게 솔직하게 리뷰합니다",
+      "소면슬라이더부터 실생활 아이템까지",
+      "알뜰 소비(?) 팁과 정직한 후기로 나의 소비를 막아보세요",
+      "리뷰야 놀자의 솔직 리뷰의 세계로 당신의 지갑을 지켜봅시다"
     ]
   }
 };

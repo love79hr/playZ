@@ -123,3 +123,39 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// 해시태그 오버레이 모바일 터치 이벤트
+document.addEventListener('DOMContentLoaded', function() {
+  const creatorLinks = document.querySelectorAll('.creator_list li a');
+  
+  creatorLinks.forEach(link => {
+    // 모바일 터치 이벤트
+    link.addEventListener('touchstart', function(e) {
+      e.preventDefault();
+      
+      // 다른 모든 링크에서 active 클래스 제거
+      creatorLinks.forEach(otherLink => {
+        if (otherLink !== link) {
+          otherLink.classList.remove('active');
+        }
+      });
+      
+      // 현재 링크 토글
+      link.classList.toggle('active');
+    });
+    
+    // 데스크톱에서는 터치 이벤트 비활성화
+    link.addEventListener('mouseenter', function() {
+      link.classList.remove('active');
+    });
+  });
+  
+  // 다른 곳 클릭 시 오버레이 닫기
+  document.addEventListener('click', function(e) {
+    if (!e.target.closest('.creator_list li a')) {
+      creatorLinks.forEach(link => {
+        link.classList.remove('active');
+      });
+    }
+  });
+});

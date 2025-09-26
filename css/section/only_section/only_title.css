@@ -36,7 +36,8 @@
 @media (max-width: 1080px){}
 @media (max-width: 960px){
   #only_title{
-    height: clamp(500px, 100vw, 800px);
+    height: clamp(400px, 100vw, 800px);
+    padding-top: 50px;
   }
 }
 @media (max-width: 768px){}
