@@ -26,3 +26,72 @@ function checkScroll(){
     footerBottom.classList.remove('animate');
   }
 }
+
+// Contact 팝업창 기능
+const mapIcon = document.querySelector('.map_icon');
+const contactPopup = document.querySelector('.contact_popup');
+const contactClose = document.querySelector('.contact_close');
+const contactButton = document.querySelector('.contact_button');
+
+// 팝업창 열기
+mapIcon.addEventListener('click', () => {
+  contactPopup.style.display = 'block';
+  contactPopup.style.opacity = '0';
+  contactPopup.style.transform = 'translateY(-20px)';
+  
+  setTimeout(() => {
+    contactPopup.style.transition = 'all 0.3s ease';
+    contactPopup.style.opacity = '1';
+    contactPopup.style.transform = 'translateY(0)';
+  }, 10);
+});
+
+// 팝업창 닫기
+contactClose.addEventListener('click', () => {
+  contactPopup.style.transition = 'all 0.3s ease';
+  contactPopup.style.opacity = '0';
+  contactPopup.style.transform = 'translateY(-20px)';
+  
+  setTimeout(() => {
+    contactPopup.style.display = 'none';
+  }, 300);
+});
+
+// 이메일 전송 기능
+contactButton.addEventListener('click', () => {
+  const name = document.querySelector('input[name="name"]').value;
+  const email = document.querySelector('input[name="email"]').value;
+  const phone = document.querySelector('input[name="phone"]').value;
+  const message = document.querySelector('textarea[name="message"]').value;
+  
+  // 입력값 검증
+  if (!name || !email || !message) {
+    alert('이름, 이메일, 메시지는 필수 입력 항목입니다.');
+    return;
+  }
+  
+  // 이메일 형식 검증
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+    alert('올바른 이메일 형식을 입력해주세요.');
+    return;
+  }
+  
+  // mailto 링크 생성
+  const subject = `Contact Form - ${name}`;
+  const body = `이름: ${name}\n이메일: ${email}\n전화번호: ${phone}\n\n메시지:\n${message}`;
+  
+  const mailtoLink = `mailto:playzofficial33.3@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  
+  // 새 창에서 이메일 클라이언트 열기
+  window.open(mailtoLink);
+  
+  // 폼 초기화
+  document.querySelector('input[name="name"]').value = '';
+  document.querySelector('input[name="email"]').value = '';
+  document.querySelector('input[name="phone"]').value = '';
+  document.querySelector('textarea[name="message"]').value = '';
+  
+  // 팝업창 닫기
+  contactClose.click();
+});

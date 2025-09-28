@@ -1,0 +1,143 @@
+#about_map{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 10%;
+}
+h3.contact_title{
+    font-family: var(--main_font);
+    text-transform: uppercase;
+    font-size: clamp(40px, 10vw, 130px);
+    font-weight: 700;
+    margin-bottom: 8%;
+}
+
+.map_img{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+.map_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.map_img a.map_icon{
+    position: absolute;
+    top: 52%;
+    left: 47%;
+    /* transform: translate(-50%, -50%); */
+    font-size: 30px;
+    color: var(--main_color);
+}
+
+.map_img a.map_icon i{
+    font-size: clamp(16px, 3vw, 50px);
+    color: var(--point_color1);
+    text-shadow: 0 0 10px rgba(5,2,19,0.5);
+    transition: all 0.3s ease;
+}
+.map_img a.map_icon i:hover{
+    color: var(--point_color2);
+}
+
+/* contact 팝업창 영역 */
+.contact_popup{
+    width: 600px;
+    height: 800px;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    border: 2px solid var(--sub_color);
+    background-color: rgba(5,2,19,0.7);
+    padding: 0 2%;
+    display: none;
+}
+
+.contact_popup a.contact_close{
+    display: block;
+    font-family: var(--sub_font);
+    font-size: 35px;
+    font-weight: 500;
+    color: var(--sub_color);
+    text-align: right;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 2%;
+    right: 3%;
+}
+.contact_popup a.contact_close:hover{
+    color: var(--point_color1);
+}
+
+.contact_popup ul.contact_list{
+    width: 100%;
+    height: auto;
+    margin-top: 35%;
+    /* background-color: darkolivegreen; */
+}
+.contact_popup ul.contact_list li{
+    width: 100%;
+    /* padding: 1% 0; */
+    border-bottom: 1px solid var(--sub_color);
+    margin-bottom: 15%;
+}
+.contact_popup ul.contact_list li span{
+    display: inline-block;
+    width: 23%;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--sub_color);
+    /* background-color: blue; */
+}
+.contact_popup ul.contact_list li input{
+    width: 76%;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: var(--sub_font);
+    font-size: 18px;
+    color: var(--sub_color);
+    vertical-align: top;
+    caret-color: var(--point_color1);
+}
+
+.contact_popup ul.contact_list li textarea{
+    width: 76%;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: var(--sub_font);
+    font-size: 18px;
+    color: var(--sub_color);
+    vertical-align: top;
+    caret-color: var(--point_color1);
+    resize: none;
+    padding-left: 2%;
+    padding-top: 1%;
+}
+.contact_popup a.contact_button{
+    display: block;
+    text-transform: uppercase;
+    font-family: var(--sub_font);
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--letter);
+    background-color: var(--sub_color);
+    text-align: center;
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+    padding: 2% 3%;
+    transition: all 0.3s ease;
+}
+.contact_popup a.contact_button:hover{
+    color: var(--point_color1);
+}
+.contact_popup a.contact_button i{
+    font-weight: 700;
+}

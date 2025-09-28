@@ -26,3 +26,16 @@ function checkScroll(){
     footerBottom.classList.remove('animate');
   }
 }
+
+
+// swiper
+var swiper = new Swiper(".poster_slide", {
+  spaceBetween: 30,
+  slidePerView:1,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  loop:true,
+  autoplay:true,
+});

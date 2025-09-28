@@ -114,6 +114,7 @@ ul.creator_list li a .hashtag_overlay .hashtag{
   font-size: clamp(10px, 2vw, 16px);
   font-weight: 400;
   white-space: nowrap;
+  text-align: center;
 }
 
 /* 모바일 터치 이벤트를 위한 active 클래스 */

@@ -1,0 +1,91 @@
+#what_title{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--sub_color);
+    color: var(--letter);
+    font-family: var(--sub_font) ;
+    padding-top: 70px;
+}
+.what_title{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.what_img{
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.what_img img{
+    width: 43%;
+}
+
+.what_title_cont{}
+.what_title_cont .first_title , .what_title_cont .second_title{
+    font-family: var(--main_font) ;
+    text-transform: uppercase;
+    padding-bottom: 1.5%;
+    font-size: clamp(15px, 1.8vw , 30px);
+    font-weight: 600;
+    display: inline-block;
+}
+.what_title_cont .third_title{
+    padding-bottom: 3px;
+    font-size: clamp(15px, 1.8vw , 23px);
+}
+.what_title_cont .fourth_title{
+    font-size: clamp(15px, 1.8vw , 23px);
+}
+
+
+
+/* media */
+@media (max-width: 1290px){
+    #what_title{padding-top: 100px;}
+    .what_img{height: 55%;}
+}
+@media (max-width: 1155px){
+    #what_title{height: 80vh;}
+}
+@media (max-width: 960px){
+    #what_title{padding-top: 110px;}
+    .what_img img{width: 50%;}
+}
+@media (max-width: 880px){
+    #what_title{padding-top: 120px;}
+    #what_title{height: 70vh;}
+    .what_title_cont .first_title , .what_title_cont .second_title{font-size: clamp(18px, 2.3vw , 30px);}
+    .what_title_cont .third_title{font-size: clamp(15px, 1.5vw , 20px);}
+    .what_title_cont .fourth_title{font-size: clamp(15px, 1.5vw , 20px);}
+}
+@media (max-width: 750px){
+    #what_title{padding-top: 100px;}
+}
+@media (max-width: 650px){
+    #what_title{height: 60vh;}
+    .what_img{height: 48%;}
+    .what_title_cont .first_title , .what_title_cont .second_title{
+    padding-bottom: 0%;
+    display: block;}
+    .what_title_cont .second_title{padding-bottom: 2%;}
+}
+@media (max-width: 500px){
+    .what_img img{width: 60%;}
+    .what_title_cont .first_title , .what_title_cont .second_title{font-size: clamp(16px, 2.1vw , 25px);}
+    .what_title_cont .third_title{font-size: clamp(12px, 1.3vw , 20px);}
+    .what_title_cont .fourth_title{font-size: clamp(12px, 1.3vw , 20px);}
+}
+@media (max-width: 400px){
+    #what_title{height: 50vh;}
+    .what_img img{width: 70%;}
+    .what_title_cont .first_title , .what_title_cont .second_title{font-size: clamp(14px, 2vw , 22px);}
+    .what_title_cont .third_title{font-size: clamp(10px, 1.1vw , 18px);}
+    .what_title_cont .fourth_title{font-size: clamp(10px, 1.1vw , 18px);}
+}
+@media (max-width: 335px){
+    .what_title_cont .first_title , .what_title_cont .second_title{font-size: clamp(13px, 1.8vw , 20px);}
+    .what_title_cont .third_title{font-size: clamp(9px, 1vw , 16px);}
+    .what_title_cont .fourth_title{font-size: clamp(9px, 1vw , 16px);}
+}
