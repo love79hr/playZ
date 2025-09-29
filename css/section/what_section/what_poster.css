@@ -1,11 +1,13 @@
 #what_poster{
     width: 100%;
     height: 100vh;
-    background-color: var(--sub_color);
+    background-image: url("https://github.com/love79hr/playZ/blob/main/images/what_bg1.png?raw=true");
     color: var(--letter);
-    font-family: var( --sub_font);
+    font-family: var( --main_font);
     padding-top: 120px;
     font-weight: 400;
+    letter-spacing: 2%;
+    line-height: clamp(30px ,2.8vw, 50px);
 }
 .what_poster{}
 .poster_top{
@@ -15,7 +17,7 @@
     margin-left: 8%;
 }
 .poster_top .text{
-    font-size: clamp(15px, 2.2vw, 28px);
+    font-size: clamp(15px, 2.2vw, 35px);
 }
 .poster_txt1{}
 .poster_txt2{}
@@ -32,14 +34,14 @@
 
 .poster_top img{
     margin-left: 8%;
-    width: 30%;
+    width: 40%;
 }
 
 .poster_slide{
-    width: 80%;
+    width: 100%;
     height: 100%;
     margin-top: 5%;
-    padding-bottom: 25px;
+    padding-bottom: 40px;
     position: relative;
 }
 .swiper-slide{
@@ -89,25 +91,37 @@
     #what_poster{  height: 60vh;}
 }
 @media (max-width: 730px){
-    #what_poster{  height: 50vh;}
+    #what_poster{  height: 53vh;line-height: clamp(23px ,2.5vw, 50px);}
 }
 @media (max-width: 690px){
-    #what_poster{  height: 45vh;}
+    #what_poster{  height: 48vh;}
 }
 @media (max-width: 540px){
-    #what_poster{  height: 38vh;}
+    #what_poster{  height: 40vh;}
 }
 @media (max-width: 453px){
-    #what_poster{  height: 30vh;}
+    #what_poster{line-height:20px;}
     .poster_top{ margin-left: 2%;}
     .poster_slide{padding-bottom: 20px;}
     .poster_top .text{font-size: clamp(13px, 2vw, 28px);}
     .poster_txt7 span{font-family: var( --main_font); font-size: clamp(9px, 1vw, 17px);}
     .poster_slide .swiper-pagination .swiper-pagination-bullet{width: 5px; height: 5px;}
 }
+@media (max-width: 440px){
+    #what_poster{  height: 33vh;}
+}
+@media (max-width: 400px){
+    #what_poster{  height: 30vh;}
+}
 @media (max-width: 380px){
-    #what_poster{  height: 25vh;}
-    .poster_top img{width: 90px; margin-left: 10px;}
+    #what_poster{ line-height:16px;}
+    .poster_top img{width: 150px; margin-left: 10px;}
     .poster_top .text{font-size: clamp(11px, 1.5vw, 25px);}
     .poster_txt7 span{font-family: var( --main_font); font-size: clamp(8px, 1vw, 15px);}
+}
+@media (max-width: 340px){
+    #what_poster{  height: 28vh;}
+}
+@media (max-width: 330px){
+    .poster_top img{width: 130px;}
 }

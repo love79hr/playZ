@@ -1,10 +1,10 @@
 #what_sponsor{
     width: 100%;
     height: auto;
-    background-color: var(--sub_color);
+    background: url("https://github.com/love79hr/playZ/blob/main/images/what_bg2.png?raw=true");
     color: var(--letter);
     font-family: var( --sub_font);
-    padding-top: 250px;
+    padding-top: 40vh;
     font-weight: 400;
 }
 
@@ -83,15 +83,16 @@ article.sponsor ul.client_img li img{}
 }
 @media (max-width: 1200px){
     #what_sponsor{
-        padding-top: 0px;
+        padding-top: 150px;
     }
 }
 @media (max-width: 1000px){
-    #what_sponsor{padding-bottom: 8%}
+    #what_sponsor{padding-bottom: 8%; padding-top: 80px;}
     article.sponsor{padding-bottom: 10%;}
     article.sponsor ul.client_img{ gap: 0px;}
     article.sponsor ul.client_img li{padding: 1%;}
     article.sponsor ul.client_img li img{width: 80%;}
+    
 }
 @media (max-width: 780px){
     #what_sponsor{padding-bottom: 0}

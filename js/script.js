@@ -155,7 +155,7 @@ const creatorData = {
     handle: "@deevajessica",
     stats: "구독자 261만명 • 동영상 4.2천개",
     logo: "https://github.com/love79hr/playZ/blob/main/images/diva.png?raw=true",
-    youtube: "tCI9j_zRWuo",
+    youtube: "aUVzM15LwKM",
     instagram: "https://www.instagram.com/deeva_jessica/",
     youtubeChannel: "https://www.youtube.com/@divajessica",
     description: [
@@ -170,7 +170,7 @@ const creatorData = {
     handle: "@summerinNY",
     stats: "구독자 102만명 • 동영상 1.2천개",
     logo: "https://github.com/love79hr/playZ/blob/main/images/summer.png?raw=true",
-    youtube: "ORtA0Nrnr5k",
+    youtube: "ZowrjbwGYKY",
     instagram: "https://www.instagram.com/summerinbk/",
     youtubeChannel: "https://www.youtube.com/@summerinNY",
     description: [
@@ -199,7 +199,7 @@ const creatorData = {
     handle: "@PaniBottle",
     stats: "구독자 252만명 • 동영상 373개",
     logo: "https://github.com/love79hr/playZ/blob/main/images/pannie.png?raw=true",
-    youtube: "_qS25jVVw-s",
+    youtube: "NtaHHkhfDjE",
     instagram: "https://www.instagram.com/panibottle_official/",
     youtubeChannel: "https://www.youtube.com/@PaniBottle",
     description: [
@@ -260,7 +260,7 @@ const creatorData = {
     handle: "@정서불안김햄찌",
     stats: "구독자 58.2만명 • 동영상 86개",
     logo: "https://github.com/love79hr/playZ/blob/main/images/hamzzi.png?raw=true",
-    youtube: "hJ2JCw-lpvQ",
+    youtube: "2cfek-FkXMI",
     instagram: "https://www.instagram.com/anx_hamzzikim/",
     youtubeChannel: "https://www.youtube.com/@정서불안김햄찌",
     description: [
@@ -275,7 +275,7 @@ const creatorData = {
     handle: "@리뷰야놀자",
     stats: "구독자 69.4만명 • 동영상 703개",
     logo: "https://github.com/love79hr/playZ/blob/main/images/review.png?raw=true",
-    youtube: "4i4nPZYryDk",
+    youtube: "nIaPDcmFA_o",
     instagram: "https://www.instagram.com/reviewyanolza/",
     youtubeChannel: "https://www.youtube.com/@리뷰야놀자",
     description: [

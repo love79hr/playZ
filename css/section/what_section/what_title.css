@@ -1,7 +1,7 @@
 #what_title{
     width: 100%;
     height: 100vh;
-    background-color: var(--sub_color);
+    background-image: url("https://github.com/love79hr/playZ/blob/main/images/what_bg1.png?raw=true");
     color: var(--letter);
     font-family: var(--sub_font) ;
     padding-top: 70px;

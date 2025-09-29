@@ -112,3 +112,19 @@ contactButton.addEventListener('click', () => {
   // 팝업창 닫기
   contactClose.click();
 });
+
+// gsap
+gsap.registerPlugin(ScrollTrigger);
+gsap.utils.toArray('.title_about, .contents_box, .contact_title').forEach((el) => {
+  gsap.from(el,{
+    opacity: 0,
+    y: 20,
+    duration: 1,
+    ease: 'power1.out',
+    scrollTrigger: {
+      trigger: el,
+      start: 'top 85%',
+      toggleActions: 'play none none reverse',
+    }
+  });
+});
