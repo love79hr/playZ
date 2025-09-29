@@ -14,18 +14,19 @@ h3.contact_title{
 
 .map_img{
     width: 100%;
-    height: 600px;
+    height: clamp(200px, 100vw, 600px);
     position: relative;
 }
 .map_img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 .map_img a.map_icon{
     position: absolute;
-    top: 52%;
+    top: 50%;
     left: 47%;
     /* transform: translate(-50%, -50%); */
     font-size: 30px;
@@ -33,7 +34,7 @@ h3.contact_title{
 }
 
 .map_img a.map_icon i{
-    font-size: clamp(16px, 3vw, 50px);
+    font-size: clamp(25px, 3vw, 50px);
     color: var(--point_color1);
     text-shadow: 0 0 10px rgba(5,2,19,0.5);
     transition: all 0.3s ease;
@@ -44,11 +45,11 @@ h3.contact_title{
 
 /* contact 팝업창 영역 */
 .contact_popup{
-    width: 600px;
-    height: 800px;
+    width: 500px;
+    height: 650px;
     position: absolute;
-    top: 20%;
-    right: 10%;
+    top: 28%;
+    right: 8%;
     border: 2px solid var(--sub_color);
     background-color: rgba(5,2,19,0.7);
     padding: 0 2%;
@@ -74,12 +75,11 @@ h3.contact_title{
 .contact_popup ul.contact_list{
     width: 100%;
     height: auto;
-    margin-top: 35%;
+    margin-top: 30%;
     /* background-color: darkolivegreen; */
 }
 .contact_popup ul.contact_list li{
     width: 100%;
-    /* padding: 1% 0; */
     border-bottom: 1px solid var(--sub_color);
     margin-bottom: 15%;
 }
@@ -140,4 +140,124 @@ h3.contact_title{
 }
 .contact_popup a.contact_button i{
     font-weight: 700;
+}
+
+
+
+/* 미디어 */
+@media (max-width: 1280px){
+    .contact_popup{
+        top: 25%;
+        right: 3%;
+    }
+}
+@media (max-width: 1080px){
+    .map_img a.map_icon{
+        top: 53%;
+        left: 45%;
+    }
+}
+@media (max-width: 960px){
+    .contact_popup{
+        width: 400px;
+        height: 500px;
+        top: 30%;
+        right: 3%;
+    }
+    .contact_popup ul.contact_list{
+        margin-top: 30%;
+    }
+    .contact_popup ul.contact_list li{
+        margin-bottom: 15%;
+    }
+    .contact_popup ul.contact_list li span{
+        width: 25%;
+        font-size: 20px;
+    }
+    .contact_popup ul.contact_list li input,
+    .contact_popup ul.contact_list li textarea{
+        width: 73%;
+        height: 25px;
+    }
+    .contact_popup a.contact_button{
+        font-size: 20px;
+    }
+}
+@media (max-width: 768px){
+    .map_img{
+        height: 550px;
+    }
+    .map_img img{
+        object-position: 65% 50%;
+    }
+    .map_img a.map_icon{
+        top: 53%;
+        left: 24%;
+    }
+    .contact_popup{
+        top: 25%;
+        right: 3%;
+    }
+}
+@media (max-width: 600px){
+    .map_img a.map_icon{
+        left: 13%;
+    }
+}
+@media (max-width: 480px){ 
+    .map_img{
+        height: 400px;
+    }
+    .map_img img{
+        object-position: 60% 50%;
+    }
+    .map_img a.map_icon{
+        top: 50%;
+        left: 15%;
+    }
+    .contact_popup{
+        width: 320px;
+        height: 430px;
+        top: 15%;
+        right: 5%;
+        padding: 0 3%;
+        border: 1px solid var(--sub_color);
+    }
+    .contact_popup a.contact_close{
+        font-size: 30px;
+    }
+    .contact_popup ul.contact_list{
+        margin-top: 25%;
+    }
+    .contact_popup ul.contact_list li span{
+        font-size: 16px;
+    }
+    .contact_popup a.contact_button{
+        font-size: 18px;
+    }
+}
+@media (max-width: 320px){
+    .map_img{
+        height: 350px;
+    }
+    .map_img img{
+        object-position: 60% 50%;
+    }
+    .map_img a.map_icon{
+        left: 10%;
+    }
+    .map_img a.map_icon{
+        top: 49%;
+        left: 12%;
+    }
+    .contact_popup{
+        width: 290px;
+        height: 380px;
+        top: 15%;
+        right: 3%;
+        padding: 0 3%;
+    }
+    .contact_popup a.contact_button{
+        bottom: 7%;
+    }
 }

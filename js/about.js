@@ -33,17 +33,33 @@ const contactPopup = document.querySelector('.contact_popup');
 const contactClose = document.querySelector('.contact_close');
 const contactButton = document.querySelector('.contact_button');
 
-// 팝업창 열기
+let isPopupOpen = false;
+
+// 팝업창 열기/닫기 토글
 mapIcon.addEventListener('click', () => {
-  contactPopup.style.display = 'block';
-  contactPopup.style.opacity = '0';
-  contactPopup.style.transform = 'translateY(-20px)';
-  
-  setTimeout(() => {
+  if (isPopupOpen) {
+    // 팝업창 닫기
     contactPopup.style.transition = 'all 0.3s ease';
-    contactPopup.style.opacity = '1';
-    contactPopup.style.transform = 'translateY(0)';
-  }, 10);
+    contactPopup.style.opacity = '0';
+    contactPopup.style.transform = 'translateY(-20px)';
+    
+    setTimeout(() => {
+      contactPopup.style.display = 'none';
+    }, 300);
+    isPopupOpen = false;
+  } else {
+    // 팝업창 열기
+    contactPopup.style.display = 'block';
+    contactPopup.style.opacity = '0';
+    contactPopup.style.transform = 'translateY(-20px)';
+    
+    setTimeout(() => {
+      contactPopup.style.transition = 'all 0.3s ease';
+      contactPopup.style.opacity = '1';
+      contactPopup.style.transform = 'translateY(0)';
+    }, 10);
+    isPopupOpen = true;
+  }
 });
 
 // 팝업창 닫기
@@ -55,6 +71,7 @@ contactClose.addEventListener('click', () => {
   setTimeout(() => {
     contactPopup.style.display = 'none';
   }, 300);
+  isPopupOpen = false;
 });
 
 // 이메일 전송 기능
