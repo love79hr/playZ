@@ -157,7 +157,9 @@
   margin-top: 10%;
   text-align: right;
 }
-.popup_link a{}
+.popup_link a{
+  margin-left: 2%;
+}
 .popup_link a i{
   font-size: clamp(20px, 2vw, 25px);
   opacity: 0.5;
@@ -232,7 +234,7 @@
     height: 700px;
   }
   .only{
-    margin-top: 40%;
+    margin-top: 30%;
   }
   .only_cont{
     margin-top: 10%;

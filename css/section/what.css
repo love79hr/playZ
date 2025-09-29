@@ -115,6 +115,9 @@
   }
 }
 @media (max-width: 960px){
+  #what{
+    height: 750px;
+  }
   .what_cont{
     justify-content: space-around;
   }
@@ -122,7 +125,7 @@
 
 @media (max-width: 768px){
   #what{
-    height: 760px;
+    height: 600px;
   }
   .cont_box{
     width: 46%;

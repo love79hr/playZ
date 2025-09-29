@@ -31,6 +31,7 @@ h3.contact_title{
     /* transform: translate(-50%, -50%); */
     font-size: 30px;
     color: var(--main_color);
+    z-index: 100;
 }
 
 .map_img a.map_icon i{
@@ -54,6 +55,7 @@ h3.contact_title{
     background-color: rgba(5,2,19,0.7);
     padding: 0 2%;
     display: none;
+    z-index: 999;
 }
 
 .contact_popup a.contact_close{

@@ -1,6 +1,6 @@
 #about{
   width: 100%;
-  height: 100vh;
+  height: 700px;
   background-image: url("https://github.com/love79hr/playZ/blob/main/images/about_bg.png?raw=true");
   background-size: cover;
   background-position: center;
@@ -63,7 +63,7 @@ br.m_block{
 
 @media (max-width: 1080px){
   #about{
-    height: 80vh;
+    height: 600px;
   }
   .about{
     margin-top: 20%;
@@ -75,7 +75,10 @@ br.m_block{
 
 @media (max-width: 768px){
   #about{
-    height: 70vh;
+    height: 500px;
+  }
+  .about{
+    margin-top: 25%;
   }
   .about_cont{    
   padding: 0 5%;
@@ -94,16 +97,19 @@ br.m_block{
 }
 @media (max-width: 768px){
   #about{
-    height: 60vh;
-  }
-}
-@media (max-width: 480px){
-  #about{
-    height: 50vh;
+    height: 450px;
   }
   .about{
-    margin-top: 30%;
+    margin-top: 20%;
   }
+}
+@media (max-width: 480px){ 
+  #about{
+    height: 400px;
+  }
+  .about{
+    margin-top: 35%;
+  }  
   .about_cont a.about_button{
     margin-top: 10%;
     font-size: 20px;
