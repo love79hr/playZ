@@ -55,7 +55,7 @@
 }
 @media (max-width: 880px){
     #what_title{padding-top: 120px;}
-    #what_title{height: 70vh;}
+    #what_title{height: 700px;}
     .what_title_cont .first_title , .what_title_cont .second_title{font-size: clamp(18px, 2.3vw , 30px);}
     .what_title_cont .third_title{font-size: clamp(15px, 1.5vw , 20px);}
     .what_title_cont .fourth_title{font-size: clamp(15px, 1.5vw , 20px);}
@@ -64,7 +64,7 @@
     #what_title{padding-top: 100px;}
 }
 @media (max-width: 650px){
-    #what_title{height: 60vh;}
+    #what_title{height: 600px;}
     .what_img{height: 48%;}
     .what_title_cont .first_title , .what_title_cont .second_title{
     padding-bottom: 0%;
@@ -78,7 +78,7 @@
     .what_title_cont .fourth_title{font-size: clamp(12px, 1.3vw , 20px);}
 }
 @media (max-width: 400px){
-    #what_title{height: 50vh;}
+    #what_title{height: 500px;}
     .what_img img{width: 70%;}
     .what_title_cont .first_title , .what_title_cont .second_title{font-size: clamp(14px, 2vw , 22px);}
     .what_title_cont .third_title{font-size: clamp(10px, 1.1vw , 18px);}
