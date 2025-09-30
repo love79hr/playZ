@@ -108,7 +108,7 @@ h3.contact_title{
 }
 
 .contact_popup ul.contact_list li textarea{
-    width: 76%;
+    width: 72%;
     height: 30px;
     border: none;
     outline: none;
@@ -121,6 +121,7 @@ h3.contact_title{
     resize: none;
     padding-left: 2%;
     padding-top: 1%;
+    margin-left: 4%;
 }
 .contact_popup a.contact_button{
     display: block;
@@ -180,6 +181,7 @@ h3.contact_title{
     .contact_popup ul.contact_list li textarea{
         width: 73%;
         height: 25px;
+        margin-left: 0;
     }
     .contact_popup a.contact_button{
         font-size: 20px;
@@ -237,6 +239,18 @@ h3.contact_title{
     .contact_popup a.contact_button{
         font-size: 18px;
     }
+}
+@media (max-width: 350px){
+    .contact_popup{
+        width: 290px;
+        height: 380px;
+        right: 3%;
+    }
+    .contact_popup ul.contact_list li textarea{
+        width: 70%;
+        margin-left: 2%;
+    }
+
 }
 @media (max-width: 320px){
     .map_img{

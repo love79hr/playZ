@@ -159,3 +159,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.utils.toArray('.only_title_cont').forEach((el) => {
+  gsap.from(el,{
+    opacity: 0,
+    y: 20,
+    duration: 1,
+    ease: 'power1.out',
+    scrollTrigger: {
+      trigger: el,
+      start: 'top 85%',
+      toggleActions: 'play none none reverse',
+    }
+  });
+});
