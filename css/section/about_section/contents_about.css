@@ -1,6 +1,6 @@
 #contents_about {
     width: 100%;
-    padding-bottom: 15%;
+    padding-bottom: 5%;
     /* background-color: darkolivegreen; */
 }
 
@@ -55,6 +55,9 @@
 .img_cont img {
     width: 100%;
 }
+
+
+/* 미디어 영역 */
 
 @media (max-width: 960px){
     .contents_box{
