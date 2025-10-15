@@ -5,14 +5,16 @@
 }
 .header_about{
   width: 100%;
-  height: 100%; 
+  height: 100%;
+  margin-bottom: 25%;
 }
+
 
 .nav_about{
   width: 100%;
   height: 10%;
   padding-top: 5%;
-  background-color: var(--main_color);
+  /* background-color: var(--main_color); */
   position: fixed;
   z-index: 1000;
 }
@@ -176,7 +178,20 @@
   color: var(--point_color1);
 }
 
-
+/* 배너 동영상 영역 */
+.banner_about{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.banner_about video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 @media (max-width: 1080px){
   .nav_bar_about{
@@ -212,8 +227,17 @@
     transform: translateY(10px);
   }
 
+  /* 배너 동영상 사이즈 */
+  .banner_about{
+    height: 900px;
+  }
+
 }
-@media (max-width: 960px){}
+@media (max-width: 960px){
+  /* 배너 동영상 사이즈 */
+  .banner_about{
+    height: 800px;
+  }}
 @media (max-width: 768px){
   .nav_menu_about ul{
     /* justify-content: flex-start; */
@@ -231,6 +255,11 @@
   }
   .nav_menu_about ul li a{  
     font-size: 35px;
+  }
+  /* 배너 동영상 사이즈 */
+  .banner_about{
+    height: 650px;
+    padding-top: 15%;
   }
 }
 @media (max-width: 480px){
@@ -273,8 +302,19 @@
   .nav_menu_about ul li a{  
     font-size: 28px;
   }
+
+  /* 배너 동영상 사이즈 */
+  .banner_about{
+    padding-top: 20%;
+    height: 650px;
+  }
 }
-@media (max-width: 400px){}
+@media (max-width: 400px){
+  .banner_about{
+    padding-top: 25%;
+    height: 500px;
+  }
+}
 @media (max-width: 320px){
   .nav_bar_about{
     width: 40px;
@@ -306,5 +346,10 @@
   }
   .nav_bar_about.active .about_bar-3{
     transform: translateY(6px);
+  }
+  
+  /* 배너 동영상 사이즈 */
+  .banner_about{
+    height: 450px;
   }
 }

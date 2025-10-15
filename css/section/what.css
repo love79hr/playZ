@@ -13,6 +13,17 @@
   margin-top: 25%;
 }
 
+.what h1.h1{
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: all 0.8s ease-in-out;
+}
+
+.what h1.h1.animate{
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .what_cont{
   width: 100%;
   display: flex;

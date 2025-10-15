@@ -10,10 +10,14 @@ navBar.addEventListener('click', () => {
 
 // 스크롤 애니메이션
 const whatSection = document.querySelector('#what');
+const whatH1 = document.querySelector('.what h1.h1');
 const whatBoxes = document.querySelectorAll('.cont_box');
 const onlySection = document.querySelector('#only');
+const onlyH1 = document.querySelector('.only h1.h1');
 const onlyCont = document.querySelector('.only_cont');
 const aboutSection = document.querySelector('#about');
+const aboutBox = document.querySelector('.about_box');
+const aboutH1 = document.querySelector('.about_box h1.h1');
 const aboutText = document.querySelector('.about_cont p');
 const aboutButton = document.querySelector('.about_cont a.about_button');
 const footerBottom = document.querySelector('.f_bottom');
@@ -27,12 +31,12 @@ function checkScroll() {
   const whatSectionHeight = whatSection.offsetHeight;
   
   if (scrollTop + windowHeight > whatSectionTop + whatSectionHeight * 0.5) {
-    whatBoxes.forEach((box, index) => {
-      setTimeout(() => {
-        box.classList.add('animate');
-      }, index); 
+    whatH1.classList.add('animate');
+    whatBoxes.forEach((box) => {
+      box.classList.add('animate');
     });
   } else {
+    whatH1.classList.remove('animate');
     whatBoxes.forEach((box) => {
       box.classList.remove('animate');
     });
@@ -43,8 +47,12 @@ function checkScroll() {
   const onlySectionHeight = onlySection.offsetHeight;
   
   if (scrollTop + windowHeight > onlySectionTop + onlySectionHeight * 0.3) {
-    onlyCont.classList.add('animate');
+    onlyH1.classList.add('animate');
+    setTimeout(() => {
+      onlyCont.classList.add('animate');
+    }, 300);
   } else {
+    onlyH1.classList.remove('animate');
     onlyCont.classList.remove('animate');
   }
   
@@ -53,16 +61,24 @@ function checkScroll() {
   const aboutSectionHeight = aboutSection.offsetHeight;
   
   if (scrollTop + windowHeight > aboutSectionTop + aboutSectionHeight * 0.4) {
-    // 텍스트 먼저 애니메이션
-    aboutText.classList.add('animate');
+    aboutBox.classList.add('animate');
     
-    // 0.3초 후 버튼 애니메이션
+    setTimeout(() => {
+      aboutH1.classList.add('animate');
+    }, 300);
+    
     setTimeout(() => {
       aboutButton.classList.add('animate');
-    });
+    }, 600);
+    
+    setTimeout(() => {
+      aboutText.classList.add('animate');
+    }, 900);
   } else {
-    aboutText.classList.remove('animate');
+    aboutBox.classList.remove('animate');
+    aboutH1.classList.remove('animate');
     aboutButton.classList.remove('animate');
+    aboutText.classList.remove('animate');
   }
   
   // footer 배경 채우기 애니메이션
@@ -353,6 +369,48 @@ popupOverlay.addEventListener('click', closePopup);
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && popup.style.display === 'block') {
     closePopup();
+  }
+});
+
+// Security Modal 기능
+const securityModalOverlay = document.querySelector('#securityModalOverlay');
+const securityModalPopup = document.querySelector('#securityModalPopup');
+const securityModalClose = document.querySelector('#securityModalClose');
+const securityLinks = document.querySelectorAll('a[href="javascript:;"]');
+
+// 개인정보처리방침 링크 찾기
+securityLinks.forEach(link => {
+  if (link.textContent.includes('개인정보처리방침')) {
+    link.addEventListener('click', openSecurityModal);
+  }
+});
+
+// 모달 열기
+function openSecurityModal() {
+  securityModalOverlay.classList.add('active');
+  securityModalPopup.classList.add('active');
+  document.body.style.overflow = 'hidden'; // 배경 스크롤 방지
+}
+
+// 모달 닫기
+function closeSecurityModal() {
+  securityModalOverlay.classList.remove('active');
+  securityModalPopup.classList.remove('active');
+  document.body.style.overflow = 'auto'; // 스크롤 복원
+}
+
+// 모달 닫기 이벤트
+securityModalClose.addEventListener('click', closeSecurityModal);
+securityModalOverlay.addEventListener('click', (e) => {
+  if (e.target === securityModalOverlay) {
+    closeSecurityModal();
+  }
+});
+
+// ESC 키로 모달 닫기
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && securityModalOverlay.classList.contains('active')) {
+    closeSecurityModal();
   }
 });
 

@@ -38,11 +38,11 @@ h3.contact_title{
     font-size: clamp(25px, 3vw, 50px);
     color: var(--point_color1);
     text-shadow: 0 0 10px rgba(5,2,19,0.5);
-    transition: all 0.3s ease;
+    /* transition: all 0.3s ease; */
 }
-.map_img a.map_icon i:hover{
+/* .map_img a.map_icon i:hover{
     color: var(--point_color2);
-}
+} */
 
 /* contact 팝업창 영역 */
 .contact_popup{
@@ -54,7 +54,7 @@ h3.contact_title{
     border: 2px solid var(--sub_color);
     background-color: rgba(5,2,19,0.7);
     padding: 0 2%;
-    display: none;
+    display: block;
     z-index: 999;
 }
 
@@ -70,9 +70,9 @@ h3.contact_title{
     top: 2%;
     right: 3%;
 }
-.contact_popup a.contact_close:hover{
+/* .contact_popup a.contact_close:hover{
     color: var(--point_color1);
-}
+} */
 
 .contact_popup ul.contact_list{
     width: 100%;
