@@ -372,46 +372,5 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Security Modal 기능
-const securityModalOverlay = document.querySelector('#securityModalOverlay');
-const securityModalPopup = document.querySelector('#securityModalPopup');
-const securityModalClose = document.querySelector('#securityModalClose');
-const securityLinks = document.querySelectorAll('a[href="javascript:;"]');
-
-// 개인정보처리방침 링크 찾기
-securityLinks.forEach(link => {
-  if (link.textContent.includes('개인정보처리방침')) {
-    link.addEventListener('click', openSecurityModal);
-  }
-});
-
-// 모달 열기
-function openSecurityModal() {
-  securityModalOverlay.classList.add('active');
-  securityModalPopup.classList.add('active');
-  document.body.style.overflow = 'hidden'; // 배경 스크롤 방지
-}
-
-// 모달 닫기
-function closeSecurityModal() {
-  securityModalOverlay.classList.remove('active');
-  securityModalPopup.classList.remove('active');
-  document.body.style.overflow = 'auto'; // 스크롤 복원
-}
-
-// 모달 닫기 이벤트
-securityModalClose.addEventListener('click', closeSecurityModal);
-securityModalOverlay.addEventListener('click', (e) => {
-  if (e.target === securityModalOverlay) {
-    closeSecurityModal();
-  }
-});
-
-// ESC 키로 모달 닫기
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && securityModalOverlay.classList.contains('active')) {
-    closeSecurityModal();
-  }
-});
 
 
