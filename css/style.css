@@ -1,40 +1,65 @@
 @charset "utf-8";
 
-
 /* setting */
-@import url(./setting/font.css);
-@import url(./setting/vars.css);
-@import url(./setting/reset.css);
+@import url("./setting/font.css");
+@import url("./setting/vars.css");
+@import url("./setting/reset.css");
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+
+/* section */
+@import url("./section/header.css");
+@import url("./section/main.css");
+@import url("./section/about.css");
+@import url("./section/project.css");
+@import url("./section/contact.css");
 
 
-/* section_main*/
-@import url(./section/header_main.css);
-@import url(./section/what.css);
-@import url(./section/only.css);
-@import url(./section/about.css);
-@import url(./section/footer_main.css);
 
 
-/* section_what */
-@import url(./section/what_section/header_what.css);
-@import url(./section/what_section/what_title.css);
-@import url(./section/what_section/what_poster.css);
-@import url(./section/what_section/what_sponsor.css);
-@import url(./section/what_section/footer_what.css);
+/* Top 버튼 */
+.top_btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--point-color);
+    color: var(--main-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
+.top_btn:hover {
+    background-color: var(--point-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
 
-/* section_only */
-@import url(./section/only_section/header_only.css);
-@import url(./section/only_section/footer_only.css);
-@import url(./section/only_section/only_title.css);
-@import url(./section/only_section/only_contents.css);
+.top_btn.show {
+    opacity: 0.5;
+}
 
+.top_btn i {
+    font-size: 18px;
+}
 
-/* section_about */
-@import url(./section/about_section/header_about.css);
-@import url(./section/about_section/footer_about.css);
-@import url(./section/about_section/about_map.css);
-@import url(./section/about_section/contents_about.css);
-
-/* security_popup */
-@import url(./section/security_popup.css);
+/* 미디어 쿼리 */
+@media (max-width: 768px) {
+    .top_btn {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .top_btn i {
+        font-size: 16px;
+    }
+}
